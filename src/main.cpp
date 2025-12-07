@@ -10,11 +10,12 @@
 using namespace std;
 
 int main() {
+    Persona* estudiantes= new Estudiante[100];
     int opcion;
     while (opcion!=11) {
     cout<<"===Sistema de Gestion Academica UNI==="<<endl;
     cout<<"1)Registrar Estudiante"<<endl;
-    cout<<"2)Registrar a Curso"<<endl;
+    cout<<"2)Registrar Curso"<<endl;
     cout<<"3)Inscribir a Curso"<<endl;
     cout<<"4)Registrar nota parcial"<<endl;
     cout<<"5)Calcular promedio y generar reporte"<<endl;
@@ -29,6 +30,7 @@ int main() {
     switch (opcion)
     {
     case 1:
+        
         
         break;
     case 2:
