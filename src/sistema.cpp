@@ -26,5 +26,4 @@ void Sistema::registrarEstudiante(std::string nombre1,int edad1,std::string codi
     cout<<"Cantidad de cursos a inscribir: ";
     cin>>cantCursos1;
     ptr->setCantCursos(cantCursos1);
-    
 }
