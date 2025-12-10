@@ -2,6 +2,8 @@
 
 Curso::Curso(){ 
 }
+Curso::~Curso(){ 
+}
 void Curso::setNombreCurso(const std::string& nombreCurso){
     this->nombreCurso = nombreCurso;
 }
@@ -19,4 +21,10 @@ void Curso::setCreditos(int creditos){
 }
 int Curso::getCreditos() const {
     return creditos;
+}
+void Curso::setNotaParcial(float notaParcial){
+    this->notaParcial = notaParcial;
+}
+float Curso::getNotaParcial() const {
+    return notaParcial;
 }
