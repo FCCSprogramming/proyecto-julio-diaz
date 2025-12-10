@@ -1,10 +1,18 @@
 #ifndef SISTEMA_H
 #define SISTEMA_H
+#include "estudiante.h"
+#include "curso.h"
 
 
 class Sistema {
+    int numEstudiantes;
+    Estudiante* estudiantes= new Estudiante[numEstudiantes];
 public:
-    void registrarEstudiante();
+    Estudiante* ptr = estudiantes;
+    Sistema();
+    Sistema(int,Estudiante*);
+    ~Sistema();
+    void registrarEstudiante(std::string nombre,int,std::string,int,Curso*);
     void registrarCurso();
     void inscribirCurso();
     void registrarNotaParcial();
