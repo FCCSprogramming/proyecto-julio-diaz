@@ -10,7 +10,7 @@
 using namespace std;
 
 int main() {
-    Persona* estudiantes= new Estudiante[100];
+    Sistema sistema(20,nullptr);
     int opcion;
     while (opcion!=11) {
     cout<<"===Sistema de Gestion Academica UNI==="<<endl;
