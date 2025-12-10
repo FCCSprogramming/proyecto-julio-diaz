@@ -20,6 +20,12 @@ void Estudiante::mostrarInfo() {
         cout<<"Curso "<<i+1<<": "<<cursos[i].getNombreCurso()<<" - "<<cursos[i].getCodigoCurso()<<" - Creditos: "<<cursos[i].getCreditos()<<endl;
     }
 }
+float Estudiante::calcularDesempenio() const {
+    // Implementacion ficticia del calculo de desempenio
+    float desempenio = 0.0;
+    // Logica para calcular el desempenio basado en las notas de los cursos
+    return desempenio;
+}
 void Estudiante::setCantCursos(int cantCursos) {
             this->cantCursos = cantCursos;
 }
