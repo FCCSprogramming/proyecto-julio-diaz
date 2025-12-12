@@ -1,4 +1,5 @@
 #include "estudiante.h"
+#include "curso.h"
 #include <iostream>
 
 using namespace std;
@@ -16,9 +17,6 @@ void Estudiante::mostrarInfo() {
     cout<<"Edad: "<<edad<<endl;
     cout<<"Codigo: "<<codigo<<endl;
     cout<<"cursos inscritos: "<<cantCursos<<endl;
-    for (int i = 0;i<cantCursos;i++){
-        cout<<"Curso "<<i+1<<": "<<cursos[i].getNombreCurso()<<" - "<<cursos[i].getCodigoCurso()<<" - Creditos: "<<cursos[i].getCreditos()<<endl;
-    }
 }
 float Estudiante::calcularDesempenio() const {
     // Implementacion ficticia del calculo de desempenio
