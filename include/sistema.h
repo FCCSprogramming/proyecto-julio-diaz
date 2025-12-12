@@ -9,12 +9,16 @@ class Sistema {
     Estudiante* estudiantes= new Estudiante[numEstudiantes];
 public:
     Estudiante* ptr = estudiantes;
+    Estudiante* ptr2= estudiantes;
+    Curso* ptr1,ptr_1;
     Sistema();
     Sistema(int,Estudiante*);
     ~Sistema();
-    void registrarEstudiante(std::string nombre,int,std::string,int,Curso*);
-    void registrarCurso();
-    void inscribirCurso();
+    void setNumEstudiantes(int);
+    int getNumEstudiantes() const;
+    void registrarEstudiante();
+    void registrarCurso(Curso*,Curso*);
+    void inscribirCurso(Curso*,const int);
     void registrarNotaParcial();
     void calcularPromedio_generarReporte();
     void almacenarDatosEstudiantesAprobados();
