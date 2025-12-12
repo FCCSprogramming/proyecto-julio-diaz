@@ -10,7 +10,11 @@
 using namespace std;
 
 int main() {
+     const int numCursos=10;
+    int contCursos=0;
     Sistema sistema(20,nullptr);
+    Curso* cursos = new Curso[numCursos];
+    Curso* ptrCurso = cursos;
     int opcion;
     while (opcion!=11) {
     cout<<"===Sistema de Gestion Academica UNI==="<<endl;
@@ -30,11 +34,15 @@ int main() {
     switch (opcion)
     {
     case 1:
-        
-        
+        sistema.registrarEstudiante();
         break;
     case 2:
-        
+        if(contCursos==numCursos){
+            cout<<"Limite de cursos alcanzado."<<endl;
+            break;
+        }
+        sistema.registrarCurso(cursos,ptrCurso);
+        contCursos++;
         break;
     case 3:
         
