@@ -10,8 +10,8 @@ private:
    std:: string codigoCurso;
    int creditos;
    int cantEstudiantes;
-   Estudiante* estudiantes= new Estudiante[cantEstudiantes];
-   float* notaParcial= new float[cantEstudiantes];
+   Estudiante* estudiantes= new Estudiante[cantEstudiantes];//cada curso va a tener un arreglo dinamico de estudiantes con una cantidad igual a cantEstudiantes
+   float* notaParcial= new float[cantEstudiantes];//arreglo dinamico de notas parciales,una por cada estudiante inscrito respectivamente
 public:
    Estudiante* ptr3 = estudiantes;
    Estudiante* ptr4 = estudiantes;
@@ -25,7 +25,8 @@ public:
    int getCreditos() const;
    void setCantEstudiantes(int);
    int getCantEstudiantes() const;
-   void setNotaParcial(float* &);
+   Estudiante* getEstudiantes(Estudiante &estudiantes) const;
+   void setNotaParcial(float &);
    float* getNotaParcial() const;    
 };
 
