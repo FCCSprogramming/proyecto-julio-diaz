@@ -8,8 +8,8 @@ class Sistema {
     int numEstudiantes;
     Estudiante* estudiantes= new Estudiante[numEstudiantes];
 public:
-    Estudiante* ptr = estudiantes;
-    Estudiante* ptr2= estudiantes;
+    Estudiante* ptr = estudiantes;//puntero que usara para registrar estudiantes(registrarEstudiante())
+    Estudiante* ptr2= estudiantes;//puntero que se usara en distintas funciones para recorrer el arreglo dinamico de estudiantes
     Curso* ptr1,ptr_1;
     Sistema();
     Sistema(int,Estudiante*);
@@ -19,12 +19,12 @@ public:
     void registrarEstudiante();
     void registrarCurso(Curso*,Curso*);
     void inscribirCurso(Curso*,const int);
-    void registrarNotaParcial();
-    void calcularPromedio_generarReporte();
-    void almacenarDatosEstudiantesAprobados();
-    void guardarBaseDeDatos();
-    void cargarBaseDeDatos();
-    void accesoDirectoRegistros();
+    void registrarNotaParcial(Curso*);
+    void calcularPromedio_generarReporte(Sistema,Curso*,Curso*,int);
+    void almacenarDatosEstudiantesAprobados(Sistema,Curso*,Curso*,int,fstream&);
+    void guardarBaseDeDatos(Curso*,Curso*,int,fstream&);
+    void cargarBaseDeDatos(fstream&);
+    void accesoDirectoRegistros(fstream&);
     void listarDatosRegistrados();
 };
 
