@@ -28,8 +28,11 @@ void Curso::setCantEstudiantes(int cantEstudiantes){
 int Curso::getCantEstudiantes() const {
     return cantEstudiantes;
 }
-void Curso::setNotaParcial(float* &notaParcial){
-    this->notaParcial = notaParcial;
+Estudiante* Curso::getEstudiantes(Estudiante &estudiantes) const {
+    return this->estudiantes;
+}
+void Curso::setNotaParcial(float &notaParcial){
+    this->notaParcial = &notaParcial;
 }
 float* Curso::getNotaParcial() const {
     return notaParcial;
